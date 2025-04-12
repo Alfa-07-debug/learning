@@ -52,3 +52,15 @@ function greetPerson(input: string | number): string {
 console.log(greetPerson("Arif")); // Hello Arif
 console.log(greetPerson(25)); // You are 25 years old
 
+//Real World Project Use
+
+function calculateTotal(price: number, quantity: number = 1): number {
+  return price * quantity;
+}
+
+function checkout(user: string, ...items: string[]) {
+  console.log(`Checking out for ${user}:`);
+  console.log("Items:", items.join(", "));
+}
+
+checkout("Arif", "Shirt", "Jeans", "Shoes");
