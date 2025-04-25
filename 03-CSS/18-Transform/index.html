@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+</head>
+<style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: coral;
+        margin: 50px;
+        transition: transform 0.5s ease;
+        }
+    .box:hover{
+        transform:rotate(45deg) scale(1.2) skew(10deg,5deg);
+    }
+</style>
+<body>
+    <h2>hover over the box</h2>
+    <div class="box"></div>
+</body>
+</html>
