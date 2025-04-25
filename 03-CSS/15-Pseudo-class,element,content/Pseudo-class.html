@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-class-example</title>
+</head>
+<style>
+    .hover-box:hover{
+        background-color:blue;
+        color: white;
+    }
+    input:focus{
+        border: 2px solid red;
+        outline:none;
+    }
+
+    button:active{
+        background-color: red;
+        color: white;
+    }
+
+    ul li:nth-child(2){
+        color :blue;
+    }
+
+    ul li:first-child{
+        color :brown;
+    }
+
+    ul li:last-child{
+        color: rgb(0,255,0);
+    }
+
+    .checkbox:checked+label{
+        color:green;
+        font-weight: bold;
+        /* accent-color: green; */
+    }
+    .checkbox{
+        accent-color: green;
+    }
+</style>
+<body>
+    <h2>:hover</h2>
+    <div class="hover-box" style="width:200px;height:50px;">Hover me</div>
+
+    <h2>:focus</h2>
+    <input type="text" placeholder="focus me" >
+
+    <h2>:active example</h2>
+    <button>click me</button>
+
+    <h2>:nth-child,:first-child,:last-child</h2>
+    <ul>
+        <li>first item</li>
+        <li>second item</li>
+        <li>third item</li>
+        <li>last item</li>
+    </ul>
+
+    <h2>:checked example</h2>
+    <input type="checkbox" id="check1" class="checkbox">
+    <label for="check1">check me</label>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo element and content</title>
+</head>
+<style>
+    .note::before{
+        content:"📌";
+        color:yellow;
+        font-size: 20px;
+    }
+
+    .note::after{
+        content: "read me";
+        color: blue;
+        font-style: italic;
+    }
+</style>
+<body>
+    <p class="note">this is paragraph</p>
+</body>
+</html>
