@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries Example</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding: 50;
+        background-color: lightgray;
+    }
+    h1{
+        font-size: 30px;
+    }
+    @media (min-width:800px) {
+        body{
+            background-color: lightblue;
+        }
+        h1::after{
+            content: "-min width 800px active";
+            color: blue;
+        }
+    }
+    @media (max-width: 1000px) {
+      body {
+        background-color: lightcoral;
+      }
+
+      h1::after {
+        content: " - max-width 1000px active";
+        color: darkred;
+      }
+    }
+    @media (orientation: landscape) {
+      h1::before {
+        content: "🖥️ Landscape Mode - ";
+        color: purple;
+      }
+    }
+    @media (min-resolution: 2dppx) {
+      body {
+        border: 5px dashed black;
+      }
+
+      h1::after {
+        content: " - High resolution screen";
+        color: black;
+      }
+    }
+</style>
+<body>
+    <h1>Resize or rotate screen</h1>
+</body>
+</html>
